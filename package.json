@@ -1,0 +1,24 @@
+{
+  "name": "musicbot",
+  "version": "1.0.0",
+  "description": "Plays music ",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojo4x4/musicbot"
+  },
+  "author": "Jonathan Balraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jojo4x4/musicbot/issues"
+  },
+  "homepage": "https://github.com/jojo4x4/musicbot#readme",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^3.2.1"
+  }
+}
