@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "bot.js"
+    "start": "node ./bot.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/jojo4x4/musicbot#readme",
   "dependencies": {
-    "discord.io": "^2.5.3",
-    "winston": "^3.2.1"
+    "discord.js": "^11.5.0"
   }
 }
