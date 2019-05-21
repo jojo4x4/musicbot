@@ -1,15 +1,18 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
-// Initialize Discord Bot
-const bot = new Discord.Client();
-bot.on('ready', () => {
+// Initialize Discord client
+const client = new Discord.Client();
+client.music = require("discord.js-musicbot-addon");
+// // Configure client
+client.on('ready', () => {
     console.log('Connected');    
 });
-bot.on('message', msg => {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
+client.on('message', msg => {
+    console.log(`Message: ${msg}`);
+    // Our client needs to know if it will execute a command
+    // It will listen for messages that will start with `!`    
     if(!msg.content.startsWith(config.prefix) || msg.author.bot) return;
-	const args = msg.content.slice(config.prefix.length).split(' ');
+    const args = msg.content.slice(config.prefix.length).split(' ');
     const cmd = args.shift().toLowerCase();
     
     switch(cmd) {
@@ -19,9 +22,16 @@ bot.on('message', msg => {
                 msg.channel.send('Pinging...').then( m => {
                     m.edit(`Pong! It took ${Date.now() - then}ms to send`);
                 });
-            break;
+                break;
+            case 'play':
+                // TODO: handle if suffix empty
+                client.music.bot.playFunction(msg, args[0]); 
+                break;
             default: console.log(`Unhandled case: ${cmd}`)
          }     
 });
-// Start Discord bot
-bot.login(config.token);
+// Start Discord client
+client.music.start(client, {
+    youtubeKey: config.youtubeKey
+  });
+client.login(config.token);

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jojo4x4/musicbot#readme",
   "dependencies": {
-    "discord.js": "^11.5.0"
+    "discord.js": "^11.5.0",
+    "discord.js-musicbot-addon": "^13.5.2",
+    "opusscript": "0.0.6"
   }
 }
