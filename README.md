@@ -1,22 +1,23 @@
 # musicbot
 
-Requirements:
+__Requirements:__
   node.js
   
-Setup: 
-  Clone repo in your system
-  Set up an application using your Discord account at https://discordapp.com/developers/applications/
-  Get a Youtube API Key by making a new project at https://console.developers.google.com/ and adding the Youtube Data API v3 and geterating     an API Key
-  Make a config.json file in the cloned directory and fill it as such:
-    {
-        "token": "YOUR TOKEN FROM DISCORD DEVELOPER CONSOLE",
-        "prefix": ",",
-        "youtubeKey": "YOUR API KEY FROM GOOGLE DEVELOPER CONSOLE"
-    }
-  Open a terminal in the project directory and enter the command "npm install"
-  Run the command "npm start" or "node ./bot.js"
+__Setup:__ 
++ Clone repo in your system  
++ Set up an application using your Discord account at https://discordapp.com/developers/applications/  
++ Get a Youtube API Key by making a new project at https://console.developers.google.com/ and adding the Youtube Data API v3 and geterating an API Key  
++ Make a config.json file in the cloned directory and fill it as such:  
+      `{  
+            "token": "YOUR TOKEN FROM DISCORD DEVELOPER CONSOLE",  
+            "prefix": ",",  
+            "youtubeKey": "YOUR API KEY FROM GOOGLE DEVELOPER CONSOLE"  
+        }`
 
-__The commands available are:__ 
++ Open a terminal in the project directory and enter the command "npm install"  
++ Run the command "npm start" or "node ./bot.js"  
+
+__The commands available are:__   
 * `musichelp [command]`: Displays help text for commands by this addon, or help for a specific command.
 * `play <url>|<search string>`: Play audio from YouTube.
 * `search <search string>`: Search's for up to 10 videos from YT.
