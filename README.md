@@ -31,6 +31,6 @@ __The commands available are:__
 * `clearqueue`: Clears the song queue.
 * `np`: Show the current playing song.  
 
-Thanks to:
-  https://github.com/DarkoPendragon/discord.js-musicbot-addon 
-  https://discord.js.org/
+Thanks to:  
++ https://github.com/DarkoPendragon/discord.js-musicbot-addon   
++ https://discord.js.org/  
