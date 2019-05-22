@@ -1,6 +1,20 @@
 # musicbot
 
-
+Requirements:
+  node.js
+  
+Setup: 
+  Clone repo in your system
+  Set up an application using your Discord account at https://discordapp.com/developers/applications/
+  Get a Youtube API Key by making a new project at https://console.developers.google.com/ and adding the Youtube Data API v3 and geterating     an API Key
+  Make a config.json file in the cloned directory and fill it as such:
+    {
+        "token": "YOUR TOKEN FROM DISCORD DEVELOPER CONSOLE",
+        "prefix": ",",
+        "youtubeKey": "YOUR API KEY FROM GOOGLE DEVELOPER CONSOLE"
+    }
+  Open a terminal in the project directory and enter the command "npm install"
+  Run the command "npm start" or "node ./bot.js"
 
 __The commands available are:__ 
 * `musichelp [command]`: Displays help text for commands by this addon, or help for a specific command.
@@ -15,3 +29,7 @@ __The commands available are:__
 * `leave`: Clears the song queue and leaves the channel.
 * `clearqueue`: Clears the song queue.
 * `np`: Show the current playing song.  
+
+Thanks to:
+  https://github.com/DarkoPendragon/discord.js-musicbot-addon 
+  https://discord.js.org/
