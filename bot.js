@@ -12,7 +12,7 @@ client.on('message', msg => {
 
     const args = msg.content.slice(config.prefix.length).split(' ');
     const cmd = args.shift().toLowerCase();
-    musicCommands = ['musichelp', /*'play'*/, 'search', 'skip', 'queue', 'pause', 'resume',
+    musicCommands = ['help', /*'play'*/, 'search', 'skip', 'queue', 'pause', 'resume',
         'remove', 'volume', 'leave', 'clearqueue', 'np'];
 
     if(musicCommands.includes(cmd)){
