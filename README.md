@@ -7,13 +7,7 @@ __Setup:__
 + Clone repo in your system  
 + Set up an application using your Discord account at https://discordapp.com/developers/applications/  
 + Get a Youtube API Key by making a new project at https://console.developers.google.com/ and adding the Youtube Data API v3 and geterating an API Key  
-+ Make a config.json file in the cloned directory and fill it as such:  
-      `{  
-            "token": "YOUR TOKEN FROM DISCORD DEVELOPER CONSOLE",  
-            "prefix": ",",  
-            "youtubeKey": "YOUR API KEY FROM GOOGLE DEVELOPER CONSOLE"  
-        }`
-
++ Edit the config.json file in the cloned directory and fill in required fields    
 + Open a terminal in the project directory and enter the command "npm install"  
 + Run the command "npm start" or "node ./bot.js"  
 
