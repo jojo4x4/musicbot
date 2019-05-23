@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const config = require('./config.json');
 // Initialize Discord client
 const client = new Discord.Client();
 client.music = require("discord.js-musicbot-addon");
@@ -8,9 +7,9 @@ client.on('ready', () => {
     console.log('Connected');    
 });
 client.on('message', msg => {   
-    if(!msg.content.startsWith(config.prefix) || msg.author.bot) return;
+    if(!msg.content.startsWith(system.env.prefix) || msg.author.bot) return;
 
-    const args = msg.content.slice(config.prefix.length).split(' ');
+    const args = msg.content.slice(system.env.prefix.length).split(' ');
     const cmd = args.shift().toLowerCase();
     musicCommands = ['help', /*'play'*/, 'search', 'skip', 'queue', 'pause', 'resume',
         'remove', 'volume', 'leave', 'clearqueue', 'np'];
@@ -33,8 +32,8 @@ client.on('message', msg => {
 });
 // Start Discord client
 client.music.start(client, {
-    youtubeKey: config.youtubeKey,
-    botPrefix: config.prefix,
+    youtubeKey: system.env.youtubeKey,
+    botPrefix: system.env.prefix,
     bitRate: "320000",
     defVolume: 30,
     bigPicture: true,
@@ -42,4 +41,4 @@ client.music.start(client, {
         enabled: false
     }
   });
-client.login(config.token);
+client.login(system.env.token);
