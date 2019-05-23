@@ -17,7 +17,7 @@ client.on('message', msg => {
     if(musicCommands.includes(cmd)){
         return;
     }
-         
+
     functions = {
         'ping': (msg, args) => {
             const then = Date.now();
@@ -40,5 +40,5 @@ client.music.start(client, {
     play: {
         enabled: false
     }
-  });
-client.login(system.env.token);
+});
+client.login(system.env.discordToken);
