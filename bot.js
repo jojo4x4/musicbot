@@ -7,9 +7,9 @@ client.on('ready', () => {
     console.log('Connected');    
 });
 client.on('message', msg => {   
-    if(!msg.content.startsWith(system.env.prefix) || msg.author.bot) return;
+    if(!msg.content.startsWith(process.env.prefix) || msg.author.bot) return;
 
-    const args = msg.content.slice(system.env.prefix.length).split(' ');
+    const args = msg.content.slice(process.env.prefix.length).split(' ');
     const cmd = args.shift().toLowerCase();
     musicCommands = ['help', /*'play'*/, 'search', 'skip', 'queue', 'pause', 'resume',
         'remove', 'volume', 'leave', 'clearqueue', 'np'];
@@ -32,8 +32,8 @@ client.on('message', msg => {
 });
 // Start Discord client
 client.music.start(client, {
-    youtubeKey: system.env.youtubeKey,
-    botPrefix: system.env.prefix,
+    youtubeKey: process.env.youtubeKey,
+    botPrefix: process.env.prefix,
     bitRate: "320000",
     defVolume: 30,
     bigPicture: true,
